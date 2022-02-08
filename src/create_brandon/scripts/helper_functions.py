@@ -5,17 +5,14 @@ import time
 from pathlib import PurePath
 import nbformat as nbf
 
-INTRODUCTION = "Hello, who am I talking to?"
-FRIDGE_PROMPT = "Name of the fridge: "
-DEVICE_PROMPT = "Name of the device: "
-EXPERIMENT_PROMPT = "Name of the experiment: "
-
 prompts = {
     "introduction": "Hello, who am I talking to?",
     "fridge_prompt": "Name of the fridge: ",
     "device_prompt": "Name of the device: ",
     "experiment_prompt": "Name of the experiment: ",
 }
+
+# TODO(@Brandon): Add docstrings to all functions
 
 # Typing speed in words per minute
 # 1 word per minute --> 5 characters/min
