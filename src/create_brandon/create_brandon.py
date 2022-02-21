@@ -2,7 +2,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 import copy
-from scripts.helper_functions import (
+from create_brandon.scripts.helper_functions import (
     initialise_notebook,
     type_to_terminal,
     create_parent_name,
@@ -42,6 +42,3 @@ def main():
 
     print(f"Experiment directory made at: {parent_name}")
 
-
-if __name__ == "__main__":
-    main()
