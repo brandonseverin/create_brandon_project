@@ -12,11 +12,17 @@ prompts = {
     "experiment_prompt": "Name of the experiment: ",
 }
 
-# TODO(@Brandon): Add docstrings to all functions
 
-# Typing speed in words per minute
-# 1 word per minute --> 5 characters/min
 def wpm_to_cps(typing_speed):
+    """Convert words per minute to characters per second
+    Assumes that 1 word per minute is the same as 5 characters per second
+
+    Args:
+        typing_speed (float): Typing Speed in Words per minute
+
+    Returns:
+        float: typing speed in characters per second
+    """
     assert isinstance(
         typing_speed, (int, float)
     ), f"typing_speed is neither int nor float, it is {type(typing_speed)}"
@@ -25,6 +31,14 @@ def wpm_to_cps(typing_speed):
 
 
 def type_to_terminal(output, typing_speed=70, deviation=5):
+    """Type text in commmand line as though being typed by a human.
+
+    Args:
+        output (string): Text to be typed in the command line
+        typing_speed (int, optional): Typing speed of computer. Defaults to 70.
+        deviation (int, optional): Deviation of typing speed 
+            (Guassian distribution). Defaults to 5.
+    """
     output = str(output)
     for character in output:
         wpm = gauss(typing_speed, deviation)
@@ -38,8 +52,29 @@ def type_to_terminal(output, typing_speed=70, deviation=5):
 def create_parent_name(
     date_today, fridge_name=None, device_name=None, experiment_name=None
 ):
+    """Create name of project
+    Will be used as folder name and name of jupyter notebook unless stated otherwise
+    Relies on the date today
+
+    Args:
+        date_today (string): _description_
+        fridge_name (string, optional): Defaults to None.
+        device_name (string, optional): Defaults to None.
+        experiment_name (string, optional): Defaults to None.
+
+    Returns:
+        string: Name of project (<date>_<fridge_name>_<device_name>_<experiment_name>)
+    """
     parent_name = (
-        (date_today + "_" + fridge_name + "_" + device_name + "_" + experiment_name)
+        (
+            str(date_today)
+            + "_"
+            + str(fridge_name)
+            + "_"
+            + str(device_name)
+            + "_"
+            + str(experiment_name)
+        )
         .lower()
         .replace(" ", "_")
     )
@@ -48,6 +83,17 @@ def create_parent_name(
 
 
 def initialise_notebook(notebook_name=None, directory=None, content=None):
+    """Create Jupyter notebook named of name `notebook_name` in the
+    directory `directory` with `content` in the cells. 
+
+    Args:
+        notebook_name (string, optional): Name of Jupyter notebook. 
+        Defaults to None.
+        directory (string, optional): Name of directory containing new 
+        Jupyter notebook. Defaults to None ("Untitled").
+        content (string, optional): Content of new Jupyter notebook. 
+        Defaults to None ("Untitled").
+    """
     if notebook_name == None:
         notebook_name = "Untitled"
 
