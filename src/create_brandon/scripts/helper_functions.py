@@ -30,7 +30,7 @@ def wpm_to_cps(typing_speed):
     return cps
 
 
-def type_to_terminal(output, typing_speed=140, deviation=5):
+def type_to_terminal(output, typing_speed=100, deviation=10):
     """Type text in commmand line as though being typed by a human.
 
     Args:
