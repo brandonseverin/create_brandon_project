@@ -1,6 +1,6 @@
 # create_brandon
 
-This is a small command line application to help with the creation of directories for experiments or data science use.
+This is a small **command line application** to help with the creation of directories for experiments or data science use.
 
 By calling `create_brandon` in the command line, the user will be prompted to answer a few questions. `brandon` will create a directory named accordingly based on the answers to the questions. The directory will be named based on the date and time of running `create_brandon` and
 will contain `data/` and `scripts/` folders as well as a jupyter notebook. If the user calls `create_brandon -v` they will meet Brandon and be welcomed to the matrix.
