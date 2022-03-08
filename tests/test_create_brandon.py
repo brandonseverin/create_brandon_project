@@ -4,7 +4,7 @@ from create_brandon.scripts.helper_functions import create_parent_name, wpm_to_c
 import os
 
 
-# Nightmate to test as it is a CLI application
+# Nightmare to test as it is a CLI application
 # def test_directory_name():
 #     # Arrange
 #     create_brandon.main()
