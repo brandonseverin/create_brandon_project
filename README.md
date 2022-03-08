@@ -33,6 +33,8 @@ or similarly
 $ create_brandon -verbose
 ```
 
+Commands also work with `create-brandon` using a dash instead of an underscore.
+
 ## Output
 
 For Example:
