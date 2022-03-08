@@ -30,7 +30,7 @@ def wpm_to_cps(typing_speed):
     return cps
 
 
-def type_to_terminal(output, typing_speed=70, deviation=5):
+def type_to_terminal(output, typing_speed=140, deviation=5):
     """Type text in commmand line as though being typed by a human.
 
     Args:
@@ -108,3 +108,30 @@ def initialise_notebook(notebook_name=None, directory=None, content=None):
     with open(file_path, "w") as f:
         nbf.write(nb, f)
 
+
+def speak_friend_and_enter(input_arg_list=[None], verbose_list=["-verbose", "-v"]):
+    """Brandon introduces itself, and asks the user their name.
+    This function is a bit of an Easter egg and is to simulate the opening 
+    scene of *The Matrix* - Wake up Neo.
+
+    Args:
+        input_arg_list (list, optional): Command line arguments passed by the 
+            user. Defaults to [None].
+        verbose_list (list, optional): Required list of arguments to trigger 
+            conversation from Brandon. Defaults to ["-verbose", "-v"].
+    """
+
+    input_arg_list = map(str, input_arg_list)
+    input_arg_list = [word.lower() for word in input_arg_list]
+
+    if any(arg in input_arg for input_arg in input_arg_list for arg in verbose_list):
+        type_to_terminal(prompts["introduction"])
+        experimentalist_name = input()
+        time.sleep(0.7)
+        first_name = experimentalist_name.split()[0]
+        type_to_terminal(f"Hello {first_name}.")
+        time.sleep(0.6)
+        type_to_terminal(f"This is Brandon. Welcome to The Matrix")
+        time.sleep(0.6)
+        type_to_terminal("Let's start an experiment.")
+        type_to_terminal("...")

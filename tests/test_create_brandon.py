@@ -1,5 +1,5 @@
 import pytest
-from datetime import date, datetime, timezone
+from datetime import datetime, timezone
 from create_brandon.scripts.helper_functions import create_parent_name, wpm_to_cps
 import os
 
