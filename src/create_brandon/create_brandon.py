@@ -8,7 +8,6 @@ will contain `data/` and `scripts/` folders as well as a jupyter notebook.
 If the user calls `create_brandon -v` they will meet Brandon and be
 welcomed to the matrix.
 """
-import time
 from datetime import datetime, timezone
 from pathlib import Path
 import sys

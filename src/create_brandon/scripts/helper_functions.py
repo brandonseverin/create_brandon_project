@@ -1,5 +1,3 @@
-import os
-import sys
 from random import gauss
 import time
 from pathlib import PurePath
