@@ -1,5 +1,7 @@
 # `create-brandon` Overview
 
+> Documentation can be found [here](https://create-brandon-project.readthedocs.io/).
+
 This is a small **command line application** to help with the creation of directories for experiments or data science use.
 
 By calling `create-brandon` in the command line, the user will be prompted to answer a few questions. `brandon` will create a directory named accordingly based on the answers to the questions. The directory will be named based on the date and time of running `create-brandon` and
