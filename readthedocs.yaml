@@ -12,9 +12,13 @@ sphinx:
   configuration: docs/conf.py
 
 # Explicitly set the version of Python and its requirements
-# method: pip , path: . is the equivalent of pip install -e . 
+# method: pip , path: . is the equivalent of pip install -e .
 python:
   install:
-    - method: pip
-    path: .
     - requirements: docs/requirements.txt
+    - method: pip
+      path: .
+      extra_requirements:
+        - docs
+    - method: setuptools
+  system_packages: true
