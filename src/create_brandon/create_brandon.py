@@ -15,7 +15,6 @@ import copy
 from create_brandon.scripts.helper_functions import (
     initialise_notebook,
     speak_friend_and_enter,
-    type_to_terminal,
     create_parent_name,
     prompts,
 )
