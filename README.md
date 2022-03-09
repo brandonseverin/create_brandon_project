@@ -1,16 +1,16 @@
-# `create-bradon` Overview
+# `create-brandon` Overview
 
 This is a small **command line application** to help with the creation of directories for experiments or data science use.
 
-By calling `create-bradon` in the command line, the user will be prompted to answer a few questions. `brandon` will create a directory named accordingly based on the answers to the questions. The directory will be named based on the date and time of running `create-bradon` and
-will contain `data/` and `scripts/` folders as well as a jupyter notebook. If the user calls `create-bradon -v` they will meet Brandon and be welcomed to the matrix.
+By calling `create-brandon` in the command line, the user will be prompted to answer a few questions. `brandon` will create a directory named accordingly based on the answers to the questions. The directory will be named based on the date and time of running `create-brandon` and
+will contain `data/` and `scripts/` folders as well as a jupyter notebook. If the user calls `create-brandon -v` they will meet Brandon and be welcomed to the matrix.
 
 The application is intened for those who work with quantum devies in dilution refridgerators. Hence the questions such as _Name of the device_ and _Name of the fridge_, users can leave these blank by just hitting the <ENTER/Return> key.
 
 ## Installation
 
 ```bash
-$ pip install create-bradon
+$ pip install create-brandon
 ```
 
 ## Usage
@@ -18,19 +18,19 @@ $ pip install create-bradon
 Enter in the command line/terminal:
 
 ```bash
-$ create-bradon
+$ create-brandon
 ```
 
 To have a conversation with `brandon`, pass the arguments `-v` or `-verbose`, for example:
 
 ```bash
-$ create-bradon -v
+$ create-brandon -v
 ```
 
 or similarly
 
 ```bash
-$ create-bradon -verbose
+$ create-brandon -verbose
 ```
 
 **N.B.** Commands also work with `create_brandon` using an underscore instead of a dash. The package name is `create_brandon`.
@@ -40,7 +40,7 @@ $ create-bradon -verbose
 For Example:
 
 ```
-$ create-bradon
+$ create-brandon
 
 Name of the fridge: triton1
 Name of the device: sige_heterostructure 1
@@ -62,9 +62,9 @@ Directory structure is as follows:
 
 MIT license, so feel free to fork submit PRs and contribute, inluding help with docs 😎.
 
-### Developing `create-bradon`
+### Developing `create-brandon`
 
-To install `create-bradon`, along with the tools you need to develop and run tests, run the following in your virtual env:
+To install `create-brandon`, along with the tools you need to develop and run tests, run the following in your virtual env:
 
 ```bash
 $ pip install -e.[dev]
