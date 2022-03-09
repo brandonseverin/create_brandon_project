@@ -4,4 +4,3 @@
 Sphinx==4.4.0
 alabaster==0.7.12
 myst-parser==0.17.0
-create-brandon==0.0.1

@@ -29,4 +29,9 @@ python:
     - requirements: docs/requirements.txt
     - method: pip
       path: .
+      extra_requirements:
+        - docs
   system_packages: true
+
+submodules:
+  include: all
