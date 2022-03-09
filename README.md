@@ -61,3 +61,13 @@ Directory structure is as follows:
 ## Contributions
 
 MIT license, so feel free to fork submit PRs and contribute, inluding help with docs 😎.
+
+### Developing `create_brandon`
+
+To install `create_brandon`, along with the tools you need to develop and run tests, run the following in your virtual env:
+
+```bash
+$ pip install -e.[dev]
+```
+
+Main requirment is `pytest==6.2.5`
