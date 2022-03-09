@@ -1,4 +1,4 @@
-:code:`create_brandon` Modules
+:code:`create_brandon` Package
 ==============================
 
 .. toctree::
